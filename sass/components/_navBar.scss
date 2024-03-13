@@ -11,6 +11,15 @@
         }
         & .dropdown-menu{
             width: fit-content;
+            display: none;
+            transform: translateY(-40px);
+            opacity: 0;
+            transition: all .3s;
+        }
+        & .dropdown-menu.active{
+            display: block;
+            transform: translateY(0px);
+            opacity: 1;
         }
         & .nav-item.drop {
             padding: 10px 0 0 10px;
@@ -21,6 +30,12 @@
                 cursor: pointer;
             }
             & .dropdown-menu-product{
+                padding: 10px;
+                display: none;
+                position: absolute;
+                background: white;
+                border: 1px solid var(--light-gray-color);
+                border-radius: 3px;
                 li{
                     &:not(:last-child){
                         margin-bottom: 10px;  
@@ -29,6 +44,9 @@
                         font-size: inherit;
                     }
                 }
+            }
+            & .dropdown-menu-product.active{
+                display: block;
             }
             & .shampoo{
                 right: -16.7rem;
@@ -98,22 +116,6 @@
                     right: -10.6rem;
                 }
             }
-            & .dropdown-menu-product{
-                display: none;
-                padding: 10px;
-                position: absolute;
-                background: white;
-                border: 1px solid var(--light-gray-color);
-                border-radius: 3px;
-            }
-            & .dropdown-menu-product.active{
-                display: block;
-            }
-        }
-        & .nav-item{
-            & .dropdown-menu.active{
-                display: block;
-            }
         }
         & .navbar-nav{
             .nav-link.active,
@@ -128,4 +130,8 @@
                 font-size: 13px;
             }
         }
+}
+
+.dropdown-toggle::after {
+    display: none;
 }

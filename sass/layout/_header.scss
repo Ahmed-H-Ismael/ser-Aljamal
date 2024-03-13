@@ -38,6 +38,18 @@
                 margin-right: 5px;
         } 
     }
+    @media screen and (max-width: 576px){
+        &__list{
+            font-size: 9px;
+            li{
+                margin-right: 0;
+            }
+        }
+        &__list li:not(:last-child){
+                margin-right: -8px;
+                border-right:0
+        } 
+    }
     &__logo{
        border-bottom: 1px solid grey; 
        @media screen and (max-width: 768px){
