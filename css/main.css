@@ -455,8 +455,6 @@ main {
   .header .navbar-nav .nav-link.active,
   .header .navbar-nav .nav-item a:hover {
     color: var(--main-color); }
-  .header .dropdown-toggle::after {
-    display: none; }
   @media screen and (max-width: 768px) {
     .header .nav-item a {
       margin-right: 20px;
