@@ -1,0 +1,134 @@
+.header{
+        text-transform: uppercase;
+        & .nav{
+            padding: 10px 0;
+        }
+        & .nav-item a{
+            padding: 0;
+            margin-right: 50px;
+            color: var(--bold-gray-color);
+            font-size: 18px;
+        }
+        & .dropdown-menu{
+            width: fit-content;
+        }
+        & .nav-item.drop {
+            padding: 10px 0 0 10px;
+            & .nav-link{
+                margin: 0;
+                margin-bottom: 10px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            & .dropdown-menu-product{
+                li{
+                    &:not(:last-child){
+                        margin-bottom: 10px;  
+                    }
+                    a{
+                        font-size: inherit;
+                    }
+                }
+            }
+            & .shampoo{
+                right: -16.7rem;
+                top: -.5rem;
+            }
+            & .conditioner{
+                right: -16.7rem;
+                top: 2.5rem;
+            }
+            & .mask{
+                right: -7.4rem;
+                top: 4.5rem;
+            }
+            & .oil{
+                right: -7.4rem;
+                top: 7.5rem;
+            }
+            & .hStyling{
+                right: -11.9rem;
+                top: 9.5rem;
+            }
+            .treatment{
+                right: -12.5rem;
+                top: 13.5rem
+            }
+            @media screen and (max-width: 990px){
+                & .shampoo{
+                    right: -16.8rem;
+                    top: -0.5rem;
+                }
+                & .conditioner{
+                    right: -16.8rem;
+                }
+                & .mask{
+                    right: -7.4rem;
+                }
+                & .oil{
+                    top: 7.2rem;
+                }
+                & .hStyling{
+                    top: 9.2rem;
+                }
+                .treatment{
+                    top: 13.8rem;
+                }
+            }
+            @media screen and (max-width: 768px){
+                & .shampoo{
+                    right: -14.9rem;
+                }
+                & .conditioner{
+                    right: -14.9rem;
+                }
+                & .mask{
+                    right: -5.6rem;
+                }
+                & .oil{
+                    top: 7.2rem;
+                    right: -5.6rem;
+                }
+                & .hStyling{
+                    top: 9.5rem;
+                    right: -10.1rem;
+                }
+                .treatment{
+                    top: 13.8rem;
+                    right: -10.6rem;
+                }
+            }
+            & .dropdown-menu-product{
+                display: none;
+                padding: 10px;
+                position: absolute;
+                background: white;
+                border: 1px solid var(--light-gray-color);
+                border-radius: 3px;
+            }
+            & .dropdown-menu-product.active{
+                display: block;
+            }
+        }
+        & .nav-item{
+            & .dropdown-menu.active{
+                display: block;
+            }
+        }
+        & .navbar-nav{
+            .nav-link.active,
+            & .nav-item a:hover
+            {
+                color: var(--main-color);
+            }
+        }
+        .dropdown-toggle::after{
+            display: none;
+        }
+        @media screen and (max-width: 768px){
+            & .nav-item a{
+                margin-right: 20px;
+                font-size: 13px;
+            }
+        }
+}

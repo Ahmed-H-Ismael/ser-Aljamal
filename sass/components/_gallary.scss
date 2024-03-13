@@ -1,0 +1,280 @@
+.gallary{
+    padding: 1rem 0;
+    &__gradient{
+        background-image:linear-gradient(180deg, rgba(0, 0, 0, 0.88) 0%, rgba(196, 196, 196, 0) 56.5%);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 40px;
+        span{
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            color: var(--white-color);
+            font-size: 4rem;
+            left: 50%;
+            top: 20%;
+            transform: translate(-50%,-20%);
+            letter-spacing: 1px;
+            text-transform: capitalize;
+            font-weight: 400;
+        }
+    }
+    &__gents{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 40px;
+        span{
+            position: absolute;
+            width: 25%;
+            text-align: center;
+            color: var(--white-color);
+            font-size: 4rem;
+            left: 10%;
+            top: 50%;
+            transform: translate(-20%,-50%);
+            letter-spacing: 1px;
+            text-transform: capitalize;
+            font-weight: 400;
+        }
+    }
+    &__spa{
+        background-image:linear-gradient(to left, #000000 0%, rgba(196, 196, 196, 0) 100%);
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        right: 0;
+        overflow: hidden;
+        border-radius: 40px;
+        span{
+            position: absolute;
+            width: 25%;
+            text-align: center;
+            color: var(--white-color);
+            font-size: 4rem;
+            right: 20%;
+            top: 20%;
+            transform: translate(-50%,-20%);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+    }
+    @media screen and (max-width: 992px){
+        &__gradient{
+            border-radius: 15px;
+            span{
+                font-size: 2rem;
+            }
+        }
+        &__gents{
+            border-radius: 15px; 
+            span{
+                font-size: 2rem;
+            }
+        }
+        &__spa{
+            span{
+                font-size: 3rem;
+                right: 45%;
+                top: 30%;
+            }
+        }
+    }
+    &__img{
+        border-radius: 40px;
+    }
+    &__transparent{
+        margin-bottom: 1.5rem;
+    }
+    @media screen and (max-width: 992px){
+        &__transparent{
+            margin-bottom: 1rem;
+        }
+    }
+    &__transparent::after{
+        position: absolute;
+        color: var(--white-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        font-weight: 400;
+        left: 0;
+    }
+    &__bg::after{
+        width: 100%;
+        height: 20%;
+        background-image: linear-gradient(to right ,rgba(237, 19, 148, 0.4),rgba(237, 19, 148, 0.4));
+
+    }
+    &__events::after{
+        content: "Events";
+        bottom: 0;
+        border-radius: 0 0 40px 40px;
+        background-size: cover;
+    }
+    &__earn::after{
+        content: "Earn With Us";
+        font-size: 3.5rem;
+        top:0;
+        border-radius: 40px 0 0 40px;
+        height: 100%;
+        width: 35%;
+        flex-wrap: wrap;
+        padding-left: 25px;
+    }
+    &__blog::after{
+        content: "Blog";
+        bottom: 10px;
+        width: 100%;
+        height: 20%;
+    }
+    &__friend::after{
+        content: "Invite friend"; 
+        bottom: 10px;
+        width: 100%;
+        height: 20%;
+    }
+    @media screen and (max-width: 992px){
+        &__img{
+            border-radius: 15px;
+        }
+        &__transparent::after{
+            font-size: 1.5rem; 
+        }
+        &__events::after{
+            content: "Events";
+            border-radius: 0 0 15px 15px;
+        }
+        &__earn::after{
+            font-size: 1.5rem;
+            border-radius: 15px 0 0 15px;
+            padding-left: 25px;
+        }
+        &__blog::after{
+            font-size: 1.3rem;
+        }
+        &__friend::after{
+            font-size: 1.3rem;
+        }
+    }
+}
+.enevelop{
+    margin: 1rem 0;
+    padding: 4rem 2rem;
+    background-color: var(--white-color);
+    border-radius: 20px;
+    & h2{
+        font-size: 2.5rem;
+        color: var(--bold-gray-color);
+    }
+    & span{
+        font-size: 14px;
+        color: var(--opacity-gray-color);
+        font-weight: 400;
+    }
+    &__img{
+        position: relative;
+    }
+    &__img-both{
+        position: absolute;
+        content: "";
+        width: 75%;
+    }
+    &__img-one{
+        bottom: -185px;
+        z-index: 9999;
+        left: 27%;
+    }
+    &__img-two{
+        top:-65px;
+        left: 15%;
+    }
+    &__input{
+        margin-top: 10px;
+        position: relative;
+        &.input-group>.form-control:focus, .input-group>.form-floating:focus-within, .input-group>.form-select:focus{
+            z-index: 0;
+            box-shadow: none;
+        }
+        &.input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+    &__input input{
+        background-color: white;
+        padding: 0.7rem;
+        border: 1px solid var(--light-gray-color);
+        border-radius: 10px;
+        height: 40px;
+        overflow: hidden;
+        outline: none;
+        width: 75%;
+    }
+    &__input .btn{
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 25%;
+        top: 0px;
+        margin-top: 0;
+        border-radius: 0 10px 10px 0;
+        &:hover{
+            background-color: rgba(237, 19, 148, 1);
+            color: var(--white-color);
+        }
+    }
+    &__link{
+        background-color: rgba(237, 19, 148, 1);
+        color: #fff;
+        -webkit-box-shadow: 0 0 15px hsla(0,0%,100%,.8);
+        box-shadow: 0 0 15px hsla(0,0%,100%,.8);
+        cursor: pointer;
+        font-weight: 700;
+        border: 1px solid #fff;
+        padding: 10px;
+        margin-top: 1.5rem;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 14px;
+        width: fit-content;
+        transition: all .2s;
+    }
+}
+.sponsers{
+    @media screen and (max-width: 992px){  
+        & .row img{
+             width: 80%;
+         }
+     }
+    margin: 1rem 0;
+    padding: 4rem 2rem; 
+    position: relative;
+    .arrows{
+        .arrow{
+            position: absolute;
+            content: "";
+            top: 36%;
+            &_left{
+                left: 0;
+            }
+            &_right{
+                right: -3%;
+        
+            }
+            @media screen and (max-width: 992px){  
+                &_right{
+                    right: 0%;
+                }
+            }
+        }
+        @media screen and (max-width: 992px){  
+            .arrow{
+                width: 10%;
+            }}
+    }
+}

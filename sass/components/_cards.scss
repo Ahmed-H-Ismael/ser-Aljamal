@@ -1,0 +1,87 @@
+.cards{
+    padding: 2rem;
+    background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85))
+     ,url(/Img/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 3rem auto;
+    border-radius: 60px;
+    &__content{
+        background-color: #cfcfcf2e;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    &__content-width{
+        width: 25%;
+    }
+    &__para{
+        color: var(--main-color);
+        background-color: var(--white-color);
+        border-radius: 15px;
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    &__icon{
+        background-color: var(--white-color);
+        border-radius: 50%;
+        padding: 8px;
+        line-height: 1;
+        cursor: pointer;
+        & svg{
+            fill:var(--main-color)
+        }
+        &:hover{
+            background-color:var(--main-color)
+        }
+        &:hover svg{
+            fill: white;
+        }
+    }
+    &__price{
+        font-size: 15px;
+        &-name{
+            line-height: 2;
+            color: var(--black-color);
+        }
+        &-price{
+            line-height: 1;
+            color: var(--main-color);
+            & del{
+                color: var(--normal-gray-color);
+            }
+        }
+    }
+    &__filter{
+        flex-wrap: wrap;
+        & li{
+            margin-right: 1rem;
+            color: var(--light-black-color);
+            border-radius: 25px;
+            text-transform: uppercase;
+            padding: 1px 15px;
+            cursor: pointer;
+            border: 1px solid var(--light-black-color);;
+        }
+        @media screen and (max-width: 992px){
+            & li{
+                margin-bottom: 1rem;
+            }
+        }
+        & li.active,
+        & li:hover{
+            color: var(--main-color);
+            background-color:var(--mainBG-color);
+            border: none;
+        }
+    }
+    .col-width{
+        flex: 0 0 25% !important;
+    }
+
+}
+@media screen and (max-width: 576px){
+    .cards{
+        border-radius: 30px;
+    }
+}

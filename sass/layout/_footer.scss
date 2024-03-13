@@ -1,0 +1,94 @@
+.footer{
+    background-color: var(--footer-bg-color);
+    font-family: 'montserrat', sans-serif;
+    padding: 2rem 0 0 0;
+    text-transform: capitalize;
+    &__head{
+        color: var(--white-color);
+        font-weight: 700;
+        font-size: 14px;
+    }
+    @media screen and (max-width: 1200px){
+        &__content {
+            margin-bottom: 1rem;
+        }
+    }
+    &__link{
+        color: var(--white-color);
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 2.7;
+        transition: all .2s;
+        padding-bottom: 1px;
+        &:hover{
+            border-bottom: 2px solid var(--white-color);
+        }
+    }
+    &__social-media li{
+        margin-bottom: 8px;
+    }
+    @media screen and (max-width: 576px){
+        &__social-media {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 100%;
+            margin: 0rem 0 5rem;
+        }
+    }
+    &__contact{
+        color: var(--white-color);
+        font-weight: 500;
+        font-size: 13px;
+    }
+    &__info{
+        margin-bottom: .4rem;
+
+    }
+    &__location{
+        margin-bottom: .3rem;
+    }
+    &__app{
+        span{
+            color:rgba(255, 255, 255, 0.6);
+        }
+        svg{
+            margin: 0 5px;
+        }
+    }
+    @media screen and (max-width: 576px){
+        &__contact{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        &__info{
+            margin-right: auto;
+    
+        }
+        &__location{
+            margin: 1rem auto;
+        }
+        &__app{
+            margin: auto;
+        }
+    }
+    &__copyright{
+        color: rgba(255, 255, 255, 0.6);
+        background-color: #464646;
+        padding: 2rem 0;
+    }
+    &__copyright-content{
+        margin-bottom: -12px;
+    }
+    &__copyright-img{
+        margin: 0;
+        & img{
+            width: 5%;
+            background-color: var(--light-gray-color);
+            border-radius: 10px;
+            padding: 2px;
+            margin-left: 10px;
+        }
+    }
+}
