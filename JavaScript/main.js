@@ -1,5 +1,6 @@
 "use strict"
-const navDrop = document.querySelectorAll(".nav-item.drop .nav-link");
+const arrow = document.querySelectorAll(".arrow");
+const navele = document.querySelectorAll(".nav-item.drop .nav-link");
 const navitem = document.querySelectorAll(".nav-item .nav-link");
 const navItemDrop = document.querySelector(".dropdown-toggle");
 const dropdownmenu = document.querySelector(".dropdown-menu");
@@ -11,13 +12,23 @@ document.querySelector("body").addEventListener('click',function(){
 navItemDrop.addEventListener("mouseover",function(){
 dropdownmenu.classList.add("active")
 })
-navItemDrop.addEventListener("mouseout",function(){
+navItemDrop.addEventListener("mouseleave",function(){
     dropdownmenu.classList.remove("active")
-    })
-navDrop.forEach(function(nav){
+})
+navele.forEach(function(nav){
     nav.addEventListener("mouseover",function(){
         let nextSibling = this.nextElementSibling;
-        if (nextSibling && !dropdownmenu.classList.contains("active")) {
+        if (nextSibling && dropdownmenu.classList.contains("active")) {
+            removeClass(menuProduct)
+            nextSibling.classList.add('active');
+        }
+    })
+})
+arrow.forEach(function(arr){
+    arr.addEventListener("click",function(){
+        let nextSibling = this.parentElement.nextElementSibling;
+        console.log(nextSibling)
+        if (nextSibling && dropdownmenu.classList.contains("active")) {
             removeClass(menuProduct)
             nextSibling.classList.add('active');
         }

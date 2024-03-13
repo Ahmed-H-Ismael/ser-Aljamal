@@ -28,6 +28,11 @@
                 margin-bottom: 10px;
                 font-size: 16px;
                 cursor: pointer;
+                & .arrow{
+                    float: right;
+                    margin-right: 10px;
+                    display: none;
+                }
             }
             & .dropdown-menu-product{
                 padding: 10px;
@@ -114,6 +119,15 @@
                 .treatment{
                     top: 13.8rem;
                     right: -10.6rem;
+                }
+            }
+        }
+        @media screen and (max-width: 992px){
+            & .nav-item.drop {
+                & .nav-link{
+                    & .arrow{
+                        display: block;
+                    }
                 }
             }
         }

@@ -407,6 +407,10 @@ main {
       margin-bottom: 10px;
       font-size: 16px;
       cursor: pointer; }
+      .header .nav-item.drop .nav-link .arrow {
+        float: right;
+        margin-right: 10px;
+        display: none; }
     .header .nav-item.drop .dropdown-menu-product {
       padding: 10px;
       display: none;
@@ -468,6 +472,9 @@ main {
       .header .nav-item.drop .treatment {
         top: 13.8rem;
         right: -10.6rem; } }
+  @media screen and (max-width: 992px) {
+    .header .nav-item.drop .nav-link .arrow {
+      display: block; } }
   .header .navbar-nav .nav-link.active,
   .header .navbar-nav .nav-item a:hover {
     color: var(--main-color); }
