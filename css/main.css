@@ -80,16 +80,6 @@ main {
   display: inline-block;
   margin: 0 10px; }
 
-@keyframes navBaranimatiob {
-  0% {
-    display: none;
-    transform: translateY(-40px);
-    opacity: 0; }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-    display: block; } }
-
 .cards {
   padding: 2rem;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(/Img/bg.png);
@@ -228,6 +218,13 @@ main {
       font-size: 3rem;
       right: 45%;
       top: 30%; } }
+  @media screen and (max-width: 576px) {
+    .gallary__gents span {
+      font-size: 1.5rem; }
+    .gallary__spa {
+      border-radius: 20px; }
+      .gallary__spa span {
+        font-size: 2rem; } }
   .gallary__img {
     border-radius: 40px; }
   .gallary__transparent {
@@ -480,8 +477,7 @@ main {
     color: var(--main-color); }
   @media screen and (max-width: 768px) {
     .header .nav-item a {
-      margin-right: 20px;
-      font-size: 13px; } }
+      margin-right: 20px; } }
 
 .dropdown-toggle::after {
   display: none; }
@@ -768,6 +764,14 @@ main {
   font-size: 16px; }
   .header__log li a:hover {
     color: var(--main-color); }
+
+@media screen and (max-width: 576px) {
+  .header__log li:not(:last-child) {
+    margin-right: 2px;
+    padding-right: 5px;
+    border-right: 0px; }
+  .header__log li a {
+    font-size: 12px; } }
 
 .left__side {
   padding: 0px 25px 0x 0; }

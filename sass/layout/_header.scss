@@ -102,5 +102,15 @@
                 color: var(--main-color);
             }
         }
+        @media screen and (max-width: 576px){
+            & li:not(:last-child){
+                margin-right: 2px;
+                padding-right: 5px;
+                border-right: 0px;
+            }
+            & li a{
+                font-size: 12px; 
+            }
+        }
     }
 }

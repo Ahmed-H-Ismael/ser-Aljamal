@@ -83,6 +83,19 @@
             }
         }
     }
+    @media screen and (max-width: 576px){
+        &__gents{ 
+            span{
+                font-size: 1.5rem;
+            }
+        }
+        &__spa{
+            border-radius: 20px;
+            span{
+                font-size: 2rem;
+            }
+        } 
+    }
     &__img{
         border-radius: 40px;
     }
