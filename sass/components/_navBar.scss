@@ -1,150 +1,155 @@
 .header{
         text-transform: uppercase;
-        & .nav{
-            padding: 10px 0;
+        &__nav{
+            position: relative;
+            z-index: 111;
         }
-        & .nav-item a{
-            padding: 0;
-            margin-right: 50px;
-            color: var(--bold-gray-color);
-            font-size: 18px;
-        }
-        & .dropdown-menu{
-            width: fit-content;
+        &__sidebar{
             display: none;
-            transform: translateY(-40px);
-            opacity: 0;
-            transition: all .3s;
         }
-        & .dropdown-menu.active{
-            display: block;
-            transform: translateY(0px);
-            opacity: 1;
+        ul li a{
+            color: var(--bold-gray-color);
         }
-        & .nav-item.drop {
-            padding: 10px 0 0 10px;
-            & .nav-link{
-                margin: 0;
-                margin-bottom: 10px;
-                font-size: 16px;
-                cursor: pointer;
-                & .arrow{
-                    float: right;
-                    margin-right: 10px;
-                    display: none;
-                }
-            }
-            & .dropdown-menu-product{
-                padding: 10px;
-                display: none;
-                position: absolute;
-                background: white;
-                border: 1px solid var(--light-gray-color);
-                border-radius: 3px;
-                li{
-                    &:not(:last-child){
-                        margin-bottom: 10px;  
-                    }
-                    a{
-                        font-size: inherit;
-                    }
-                }
-            }
-            & .dropdown-menu-product.active{
+        ul li a.active,
+        ul li a:hover{
+            color: var(--main-color);
+        }
+        &__navbar{
+            transform: translateX(-100%);
+            transition: all .2s;
+        }
+        @media screen and (max-width: 576px){
+            &__sidebar{
                 display: block;
+                cursor: pointer;
             }
-            & .shampoo{
-                right: -16.7rem;
-                top: -.5rem;
+        }
+        @media screen and (min-width: 576px){
+            &__navbar{
+                display: flex;
+                justify-content: center;
+                line-height: 3.1;
+                transform: translateX(0%);
             }
-            & .conditioner{
-                right: -16.7rem;
-                top: 2.5rem;
-            }
-            & .mask{
-                right: -7.4rem;
-                top: 4.5rem;
-            }
-            & .oil{
-                right: -7.4rem;
-                top: 7.5rem;
-            }
-            & .hStyling{
-                right: -11.9rem;
-                top: 9.5rem;
-            }
-            .treatment{
-                right: -12.5rem;
-                top: 13.5rem
-            }
-            @media screen and (max-width: 990px){
-                & .shampoo{
-                    right: -16.8rem;
-                    top: -0.5rem;
-                }
-                & .conditioner{
-                    right: -16.8rem;
-                }
-                & .mask{
-                    right: -7.4rem;
-                }
-                & .oil{
-                    top: 7.2rem;
-                }
-                & .hStyling{
-                    top: 9.2rem;
-                }
-                .treatment{
-                    top: 13.8rem;
+            &__item{
+                &:not(:last-child){
+                    margin-right: 15px;
                 }
             }
-            @media screen and (max-width: 768px){
-                & .shampoo{
-                    right: -14.9rem;
-                }
-                & .conditioner{
-                    right: -14.9rem;
-                }
-                & .mask{
-                    right: -5.6rem;
-                }
-                & .oil{
-                    top: 7.2rem;
-                    right: -5.6rem;
-                }
-                & .hStyling{
-                    top: 9.5rem;
-                    right: -10.1rem;
-                }
-                .treatment{
-                    top: 13.8rem;
-                    right: -10.6rem;
+            &__item a{
+                font-size: 18px;
+            display: block;
+            }
+        }
+        @media screen and (min-width: 991px){
+            &__item{
+                &:not(:last-child){
+                    margin-right: 40px;
                 }
             }
         }
-        @media screen and (max-width: 992px){
-            & .nav-item.drop {
-                & .nav-link{
-                    & .arrow{
-                        display: block;
-                    }
-                }
-            }
+        &__navbar.active{
+            position: absolute;
+            background-color: var(--white-color);
+            z-index: 1;
+            top: 0;
+            width: 250px;
+            transform: translateX(-5%);
         }
-        & .navbar-nav{
-            .nav-link.active,
-            & .nav-item a:hover
-            {
-                color: var(--main-color);
-            }
+        &__navbar.active li{
+            margin-bottom: 15px;
         }
-        @media screen and (max-width: 768px){
-            & .nav-item a{
-                margin-right: 20px;
-            }
+        &__navbar.active > &__item > a{
+            font-size: 20px;
+            margin-left: 15px;
         }
-}
+        &__navbar.active li.close{
+            display: block;
+        }
 
-.dropdown-toggle::after {
-    display: none;
+        &__item.hair{position: relative;}
+        &__navbar li.close{
+            display: none;
+        }
+        &__item.hair:hover &__dropmenue-one{
+            display: block;
+        }
+        &__dropmenue{
+            position: absolute;
+            background-color: var(--white-color);
+            border: 1px solid var(--light-gray-color);
+            display: none;
+        }
+        &__dropmenue > li{
+            font-size: 15px;
+            padding: 10px 20px;
+        }
+        &__dropmenue > li > a{
+            font-size: 15px;
+        }
+        &__dropmenue-one{
+            width: 200px;
+            top: 38px;
+            left: -5px;
+        }
+        &__dropmenue-one &__item-one{
+            margin-bottom: -20px;
+            position: relative;
+        }
+        &__item.hair .arrdown svg {
+            display: none;
+        }
+        &__dropmenue-two{
+            left: 100%;
+            top: 0px;
+            width: 300px;
+        }
+       &__item-one:hover > &__dropmenue-two{
+            display: block;
+        }
+        &__navbar.active &__dropmenue-two  &__item-two > .dropdown-item{
+            margin-left: 0; 
+        }
+        @media screen and (max-width: 576px) { 
+            &__item.hair .arrdown{
+                float: right;
+                margin-right: 15px;
+            }
+            &__item.hair .arrdown svg {
+                display: inline-block;
+                width: 20px;
+                vertical-align: sub;
+                cursor: pointer;
+                transform: rotate(-90deg);
+            }
+            &__dropmenue-one.active  &__item-one{
+                margin-bottom: -15px;
+            }
+            &__dropmenue-one.active  &__item-one > a{
+                padding: 5px 10px;
+                margin-left: 0; 
+            }
+            &__dropmenue{
+                transition: all .2s;
+                transform: translateX(-100%);
+            }
+            &__dropmenue.active{
+                display: block;
+                transform: translateX(0%);
+                width: 255px;
+            }
+            &__dropmenue.active > li{
+                padding: 1rem;
+            }
+            &__dropmenue.active > li > a{
+                padding: 1rem;
+                font-size: 14px;
+            }
+            &__dropmenue-two{
+                left: 0;
+                top: 40px;
+                z-index: 1;
+            }
+
+        }
 }

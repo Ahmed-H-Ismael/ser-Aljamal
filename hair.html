@@ -184,98 +184,143 @@
         </div>
         <div class="header__nav">
             <div class="container">
-                <nav class="navbar navbar-expand-lg  justify-content-center">
-                    <div class="container-fluid">
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse  justify-content-center mt-2" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                          <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">SKIN</a>
-                          </li>
-                            <li class="nav-item dropdown-toggle">
-                                <a class="nav-link hair" href="hair.html">
-                                HAIR
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li  class="nav-item drop position-relative">
-                                        <a class="nav-link">
-                                        Shampoo <span class="arrow"> &rarr;</span>
-                                        </a>
-                                        <ul class="dropdown-menu-product shampoo">
-                                            <li><a class="dropdown-item" href="#">Anti Dandruff & Hair Fall</a></li>
-                                            <li><a class="dropdown-item" href="#">Beard</a></li>
-                                            <li><a class="dropdown-item" href="#">Tonic</a></li>
-                                            <li><a class="dropdown-item" href="#">Shampoo Color</a></li>
-                                        </ul>
-                                        <a class="nav-link">
-                                            Conditioner <span class="arrow"> &rarr;</span>
-                                        </a>
-                                        <ul class="dropdown-menu-product conditioner">
-                                            <li><a class="dropdown-item" href="#">Anti Dandruff & Hair Fall</a></li>
-                                            <li><a class="dropdown-item" href="#">Beard</a></li>
-                                        </ul>
-                                        <a class="nav-link">
-                                            Mask <span class="arrow"> &rarr;</span>
-                                        </a>
-                                        <ul class="dropdown-menu-product mask">
-                                            <li><a class="dropdown-item" href="#">Beard</a></li>
-                                            <li><a class="dropdown-item" href="#">hair</a></li>
-                                        </ul>
-                                        <a class="nav-link">
-                                            OIl<span class="arrow"> &rarr;</span>
-                                        </a>
-                                        <ul class="dropdown-menu-product oil">
-                                            <li><a class="dropdown-item" href="#">Beard</a></li>
-                                            <li><a class="dropdown-item" href="#">hair</a></li>
-                                        </ul>
-                                        <a class="nav-link">
-                                            Hair Styling<span class="arrow"> &rarr;</span>
-                                        </a>
-                                        <ul class="dropdown-menu-product hStyling">
-                                            <li><a class="dropdown-item" href="#">Hair Serum</a></li>
-                                            <li><a class="dropdown-item" href="#">Hair Tonic</a></li>
-                                            <li><a class="dropdown-item" href="#">Hair Colour</a></li>
-                                            <li><a class="dropdown-item" href="#">Hair Gel</a></li>
-                                            <li><a class="dropdown-item" href="#">Hair Spray</a></li>
-                                            <li><a class="dropdown-item" href="#">Matte Clay</a></li>
-                                            <li><a class="dropdown-item" href="#">Heat Protector</a></li>
-                                            <li><a class="dropdown-item" href="#">Mousse</a></li>
-                                        </ul>
-                                        <a class="nav-link">
-                                            Treatment<span class="arrow"> &rarr;</span>
-                                        </a>
-                                        <ul class="dropdown-menu-product treatment">
-                                            <li><a class="dropdown-item" href="#">Protein</a></li>
-                                            <li><a class="dropdown-item" href="#">Protein Savana Brazilian</a></li>
-                                            <li><a class="dropdown-item" href="#">Brazillian Brush Hair Straightening</a></li>
-                                            <li><a class="dropdown-item" href="#">Protein Kit</a></li>
-                                            <li><a class="dropdown-item" href="#">Botox</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">NAIL</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">MAKEUP</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                HEALTH & HYGIENE</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">FREGANCE </a>
-                          </li>
-                          <li>
-                          </li>
-                  
-                        </ul>
-                      </div>
+                <div class="position-relative" style="height: 50px;">
+                    <div class="header__sidebar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 7H21" stroke="#CFCFCF" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M9.48999 12H21" stroke="#CFCFCF" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M3 12H5.99" stroke="#CFCFCF" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M3 17H21" stroke="#CFCFCF" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
                     </div>
-                </nav>
+                    <ul class="header__navbar">
+                        <li class="header__item close">
+                            <a href="#" style="font-size: 30px;">&#10539;</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#">skin</a>
+                        </li>
+                        <li class="header__item hair">
+                            <a href="hair.html">
+                                hair 
+                            </a>
+                            <span class="arrdown">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                </svg>
+                            </span>
+                            <ul class="header__dropmenue-one header__dropmenue">
+                                <li class="header__item-one Shampoo">
+                                    <a href="#">
+                                    Shampoo 
+                                    </a>
+                                    <span class="arrdown arrowtwo">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                        </svg>
+                                    </span>
+                                    <ul class="header__dropmenue-two header__dropmenue">
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">Anti Dandruff & Hair Fall</a></li>
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">Beard</a></li>
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">Tonic</a></li>
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">Shampoo Color</a></li>
+                                    </ul>
+                                </li>
+                                <li class="header__item-one">
+                                    <a href="#">
+                                    Conditioner  
+                                    </a>
+                                    <span class="arrdown arrowtwo">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                        </svg>
+                                    </span>
+                                    <ul class="header__dropmenue-two header__dropmenue">
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">Anti Dandruff & Hair Fall</a></li>
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">Beard</a></li>
+                                    </ul>
+                                </li>
+                                <li class="header__item-one">
+                                    <a href="#">
+                                    Mask  
+                                    </a>
+                                    <span class="arrdown arrowtwo">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                        </svg>
+                                    </span>
+                                    <ul class="header__dropmenue-two header__dropmenue">
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">Beard</a></li>
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">hair</a></li>
+                                    </ul>
+                                </li>
+                                <li class="header__item-one">
+                                    <a href="#">
+                                    OIl 
+                                    </a>
+                                    <span class="arrdown arrowtwo">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                        </svg>
+                                    </span>
+                                    <ul class="header__dropmenue-two header__dropmenue">
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">Beard</a></li>
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">hair</a></li>
+                                    </ul>
+                                </li>
+                                <li class="header__item-one">
+                                    <a href="#">
+                                    Hair Styling 
+                                    </a>
+                                    <span class="arrdown arrowtwo">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                        </svg>
+                                    </span>
+                                    <ul class="header__dropmenue-two header__dropmenue">
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">Hair Serum</a></li>
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">Hair Tonic</a></li>
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">Hair Colour</a></li>
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">Hair Gel</a></li>
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">Hair Spray</a></li>
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">Matte Clay</a></li>
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">Heat Protector</a></li>
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">Mousse</a></li>
+                                    </ul>
+                                </li>
+                                <li class="header__item-one">
+                                    <a href="#">
+                                    Treatment 
+                                    </a>
+                                    <span class="arrdown arrowtwo">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                        </svg>
+                                    </span>
+                                    <ul class="header__dropmenue-two header__dropmenue">
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">Protein</a></li>
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">Protein Savana Brazilian</a></li>
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">Brazillian Brush Hair Straightening</a></li>
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">Protein Kit</a></li>
+                                        <li class="header__item-one"><a class="dropdown-item" href="#">Botox</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__item">
+                            <a href="#">nail</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#">makeup</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#">HEALTH & HYGIENE</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#">FREGANCE</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>

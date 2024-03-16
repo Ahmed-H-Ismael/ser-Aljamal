@@ -2,11 +2,9 @@
     padding: 1rem 0;
     &__gradient{
         background-image:linear-gradient(180deg, rgba(0, 0, 0, 0.88) 0%, rgba(196, 196, 196, 0) 56.5%);
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        @include positionAbsolute;
         overflow: hidden;
-        border-radius: 40px;
+        border-radius: $border-radious-40;
         span{
             position: absolute;
             width: 100%;
@@ -22,10 +20,8 @@
         }
     }
     &__gents{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 40px;
+        @include positionAbsolute;
+        border-radius: $border-radious-40;
         span{
             position: absolute;
             width: 25%;
@@ -47,7 +43,7 @@
         height: 100%;
         right: 0;
         overflow: hidden;
-        border-radius: 40px;
+        border-radius: $border-radious-40;
         span{
             position: absolute;
             width: 25%;
@@ -90,14 +86,14 @@
             }
         }
         &__spa{
-            border-radius: 20px;
+            border-radius: $border-radious-20;
             span{
                 font-size: 2rem;
             }
         } 
     }
     &__img{
-        border-radius: 40px;
+        border-radius: $border-radious-40;
     }
     &__transparent{
         margin-bottom: 1.5rem;
@@ -110,9 +106,7 @@
     &__transparent::after{
         position: absolute;
         color: var(--white-color);
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include displayFlex;
         font-size: 3rem;
         font-weight: 400;
         left: 0;
@@ -126,14 +120,14 @@
     &__events::after{
         content: "Events";
         bottom: 0;
-        border-radius: 0 0 40px 40px;
+        border-radius: 0 0 $border-radious-40 $border-radious-40;
         background-size: cover;
     }
     &__earn::after{
         content: "Earn With Us";
         font-size: 3.5rem;
         top:0;
-        border-radius: 40px 0 0 40px;
+        border-radius: $border-radious-40 0 0 $border-radious-40;
         height: 100%;
         width: 35%;
         flex-wrap: wrap;
@@ -179,7 +173,7 @@
     margin: 1rem 0;
     padding: 4rem 2rem;
     background-color: var(--white-color);
-    border-radius: 20px;
+    border-radius: $border-radious-20;
     & h2{
         font-size: 2.5rem;
         color: var(--bold-gray-color);
@@ -214,15 +208,15 @@
             box-shadow: none;
         }
         &.input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
-            border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;
+            border-top-right-radius: $border-radious-10;
+            border-bottom-right-radius: $border-radious-10;
         }
     }
     &__input input{
-        background-color: white;
+        background-color: var(--white-color);
         padding: 0.7rem;
         border: 1px solid var(--light-gray-color);
-        border-radius: 10px;
+        border-radius: $border-radious-10;
         height: 40px;
         overflow: hidden;
         outline: none;
@@ -235,7 +229,7 @@
         width: 25%;
         top: 0px;
         margin-top: 0;
-        border-radius: 0 10px 10px 0;
+        border-radius: 0 $border-radious-10 $border-radious-10;
         &:hover{
             background-color: rgba(237, 19, 148, 1);
             color: var(--white-color);
@@ -248,7 +242,7 @@
         box-shadow: 0 0 15px hsla(0,0%,100%,.8);
         cursor: pointer;
         font-weight: 700;
-        border: 1px solid #fff;
+        border: 1px solid var(--white-color);
         padding: 10px;
         margin-top: 1.5rem;
         display: inline-block;

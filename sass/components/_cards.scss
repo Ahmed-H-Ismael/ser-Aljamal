@@ -10,7 +10,7 @@
     &__content{
         background-color: #cfcfcf2e;
         padding: 10px;
-        border-radius: 10px;
+        border-radius: $border-radious-10;
     }
     &__content-width{
         width: 25%;
@@ -35,7 +35,7 @@
             background-color:var(--main-color)
         }
         &:hover svg{
-            fill: white;
+            fill: var(--white-color);
         }
     }
     &__price{

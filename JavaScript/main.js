@@ -1,39 +1,28 @@
 "use strict"
-const arrow = document.querySelectorAll(".arrow");
-const navele = document.querySelectorAll(".nav-item.drop .nav-link");
-const navitem = document.querySelectorAll(".nav-item .nav-link");
-const navItemDrop = document.querySelector(".dropdown-toggle");
-const dropdownmenu = document.querySelector(".dropdown-menu");
-const menuProduct =document.querySelectorAll(".dropdown-menu-product");
+const sidebar = document.querySelector(".header__sidebar");
+const navBar = document.querySelector(".header__navbar");
+const close = document.querySelector(".close")
+const hairMenue = document.querySelector(".hair")
+const closeDropMenue = document.querySelector(".arrdown")
+const closeSubMenue = document.querySelectorAll(".arrowtwo")
+const dropmenue = document.querySelector(".header__dropmenue-one")
+const dropSubmenue = document.querySelector(".header__dropmenue-two")
 // dropmenu function
-document.querySelector("body").addEventListener('click',function(){
-    dropdownmenu.classList.remove("active") 
+sidebar.addEventListener("click",function(){
+    navBar.classList.add("active")
 })
-navItemDrop.addEventListener("mouseover",function(){
-dropdownmenu.classList.add("active")
+close.addEventListener("click",function(){
+    navBar.classList.remove("active")
 })
-navItemDrop.addEventListener("mouseleave",function(){
-    dropdownmenu.classList.remove("active")
+closeDropMenue.addEventListener("click",function(){
+    dropmenue.classList.toggle("active")
 })
-navele.forEach(function(nav){
-    nav.addEventListener("mouseover",function(){
-        let nextSibling = this.nextElementSibling;
-        if (nextSibling && dropdownmenu.classList.contains("active")) {
-            removeClass(menuProduct)
-            nextSibling.classList.add('active');
-        }
+closeSubMenue.forEach(function(sub){
+    sub.addEventListener("click",function(){
+        this.nextElementSibling.classList.toggle("active")
     })
 })
-arrow.forEach(function(arr){
-    arr.addEventListener("click",function(){
-        let nextSibling = this.parentElement.nextElementSibling;
-        console.log(nextSibling)
-        if (nextSibling && dropdownmenu.classList.contains("active")) {
-            removeClass(menuProduct)
-            nextSibling.classList.add('active');
-        }
-    })
-})
+
 
 // new products function
 const productsarrivals = document.querySelector(".arrivals");

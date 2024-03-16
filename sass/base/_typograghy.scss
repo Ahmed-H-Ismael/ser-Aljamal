@@ -3,9 +3,7 @@
         font-size: 3rem;
         color: var(--light-black-color);
         text-transform: capitalize;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include displayFlex;
         position: relative;
         width: fit-content;
         margin: auto auto;
@@ -20,25 +18,20 @@
             font-size: 1.3rem;
         }
     }
-    &-main::before{
+    &-main::before,&-main::after{
         position: absolute;
         content: "";
         top:50%;
-        left: -8%;
         transform: translate(-27%,-50%);
+        background-color: var(--main-color);
         width: 30px;
         height: 3px;
-        background-color: var(--main-color);
+    }
+    &-main::before{
+        left: -8%;
     }
     &-main::after{
-        position: absolute;
-        content: "";
-        top:50%;
         right: -11%;
-        transform: translate(-27%,-50%);
-        width: 30px;
-        height: 3px;
-        background-color: var(--main-color);
     }
     &-line{
         width: 60px;
