@@ -1,29 +1,35 @@
 "use strict"
 const sidebar = document.querySelector(".header__sidebar");
-const navBar = document.querySelector(".header__navbar");
+const navBar = document.querySelector(".header__ul");
+const overLay = document.querySelector(".overlay")
 const close = document.querySelector(".close")
 const hairMenue = document.querySelector(".hair")
-const closeDropMenue = document.querySelector(".arrdown")
-const closeSubMenue = document.querySelectorAll(".arrowtwo")
-const dropmenue = document.querySelector(".header__dropmenue-one")
-const dropSubmenue = document.querySelector(".header__dropmenue-two")
-// dropmenu function
+const category = document.querySelector(".header__category")
+// sidebar function
 sidebar.addEventListener("click",function(){
     navBar.classList.add("active")
+    document.querySelector("body").style.overflowY = 'hidden';
+    overLay.classList.add("active")
 })
 close.addEventListener("click",function(){
-    navBar.classList.remove("active")
+    navBar.classList.remove("active");
+    overLay.classList.remove("active");
+    document.querySelector("body").style.overflowY = 'visible';
 })
-closeDropMenue.addEventListener("click",function(){
-    dropmenue.classList.toggle("active")
+overLay.addEventListener("click",function(){
+    navBar.classList.remove("active");
+    this.classList.remove("active");
+    document.querySelector("body").style.overflowY = 'visible';
 })
-closeSubMenue.forEach(function(sub){
-    sub.addEventListener("click",function(){
-        this.nextElementSibling.classList.toggle("active")
-    })
+hairMenue.addEventListener("mouseover",function(){
+category.classList.add("active")
 })
-
-
+hairMenue.addEventListener("click",function(){
+    category.classList.add("active")  
+})
+category.addEventListener("mouseleave",function(){
+    this.classList.remove("active")
+})
 // new products function
 const productsarrivals = document.querySelector(".arrivals");
 const productssales = document.querySelector(".sales");
@@ -276,14 +282,14 @@ function removeClass(x){
         pro.classList.remove("active")
     })
 }
-function removeActive(){
-    listarr.forEach(function(active){
-        active.classList.remove("active")
-    })
-    listsales.forEach(function(active){
-        active.classList.remove("active")
-    })
-    listTreanding.forEach(function(active){
-        active.classList.remove("active")
-    })
-}
+// function removeActive(){
+//     listarr.forEach(function(active){
+//         active.classList.remove("active")
+//     })
+//     listsales.forEach(function(active){
+//         active.classList.remove("active")
+//     })
+//     listTreanding.forEach(function(active){
+//         active.classList.remove("active")
+//     })
+// }

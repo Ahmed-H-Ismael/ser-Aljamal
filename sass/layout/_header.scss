@@ -1,61 +1,79 @@
 .header{
+    //////////part 1 of header
     &__info{
         background-color: var(--main-color);
         font-weight: 400;
         font-size: 14px;
         padding: 8px 0;
-    }
-    &__list{
-        li{
-            svg{
-                margin-right: 2px;
-                vertical-align: -12%;
-            }
-            a:link,
-            a:visited{ 
-                color: var(--white-color);
-                transition: all .2s;
-                &:hover{
+        &-list{
+            li{
+                 a:link,
+                 a:visited{ 
+                    color: var(--white-color);
+                    transition: all .2s;
+                    &:hover{
                     border-bottom: 2px solid var(--white-color);
+                    color: var(--white-color);
+                    }
                 }
-            }
-            a:link,
-            :visited:not(:last-child){
-                margin-right: 10px;
-            }
-            &:not(:last-child){
-                border-right: 1px solid  var(--white-color);
-                margin-right: 10px;
-            }
-        }        
-    }
-    @media screen and (max-width: 992px){
-        &__list{
-            font-size: 12px;
+                a:link,
+                :visited:not(:last-child){
+                    margin-right: 10px;
+                }
+                &:not(:last-child){
+                    border-right: 1px solid  var(--white-color);
+                    margin-right: 10px;
+                }
+                .fa-phone-volume{
+                    transform: rotate(10deg);
+                }
+                .fa-solid,.fa-regular{
+                    @include fontAwesome
+                }
+            }    
         }
-        &__list li:not(:last-child){
+    }
+    @media screen and (max-width: 1200px){
+        &__info-list li:not(:last-child){
             margin-bottom: .5rem;
-                margin-right: 5px;
+            margin-right: 5px;
         } 
     }
     @media screen and (max-width: 576px){
-        &__list{
-            font-size: 9px;
+        &__info-list{
             li{
                 margin-right: 0;
+                font-size: 12px;
             }
         }
-        &__list li:not(:last-child){
-                margin-right: -8px;
+        &__info-list li:not(:last-child){
+                margin-right: 0px;
                 border-right:0
         } 
     }
+    ///////////part 2 of header
     &__logo{
-       border-bottom: 1px solid grey; 
-       @media screen and (max-width: 768px){
+       border-bottom: 1px solid #e5e1e1; 
+       height: 70px;
+       line-height: 3;
+       .navbar{
+        img{
+            width: 70%;
+            height: 70%;
+           }
+       } 
+       @media screen and (max-width: 991px){
         .navbar{
             width: 100%;
-    }}
+            img{
+                width: 90%;
+                height: 90%;
+               }
+           } 
+        .text-card{
+            display: none;
+        }
+}
     }
     &__search{
         position: relative;
@@ -72,45 +90,78 @@
         }
         &-btn{
             position: absolute;
-            top:-5px;
-            left:0
+            top: 0px;
+            left: 0;
+            color: gray;
         }
     }
-    @media screen and (max-width: 768px){
-        &__search{
-            width: 100%;}
-    }
     &__log{
-        & li{
+        li{
+            position: relative;
             display: flex;
             align-items: center;
             &:not(:last-child){
                 border-right: 1px solid  var(--light-gray-color);
                 padding-right: 10px;
             }
-        }
-        & li:not(:last-child){
-            margin-right: 10px;
-        }
-        & li svg{
-            margin-right: 3px;
-        }
-        & li a{
-            color: var(--normal-gray-color);
-            font-size: 16px;
-            &:hover{
+            &:not(:last-child){
+                margin-right: 10px;
+            }
+            & > a{
+                color: var(--normal-gray-color);
+                font-size: 16px;
+                &:hover{
+                    color: var(--main-color);
+                }
+            }
+            .card{
+                position: absolute;
+                content: "";
+                top: -4px;
+                left: 4px;
+                width: 18px;
+                height: 18px;
+                text-align: center;
+                color: var(--white-color);
+                font-size: 12px;
+                background-color: var(--main-color);
+                border-radius: 50%;
+                line-height: 1.4;
+            }
+            .fa-solid,.fa-regular{
+                @include fontAwesome;
+                color: var(--bold-gray-color);
+                font-size: 20px;
+            }
+            &:hover .fa-solid,&:hover .fa-regular{
                 color: var(--main-color);
             }
         }
-        @media screen and (max-width: 576px){
-            & li:not(:last-child){
-                margin-right: 2px;
-                padding-right: 5px;
-                border-right: 0px;
-            }
-            & li a{
-                font-size: 12px; 
-            }
-        }
-    }
 }
+}
+
+// @media screen and (max-width: 576px){
+//     & li:not(:last-child){
+//         margin-right: 2px;
+//         padding-right: 5px;
+//         border-right: 0px;
+//     }
+//     & li a{
+//         font-size: 12px; 
+//     }
+// }
+// }
+// @media screen and (max-width: 576px){
+// li{
+// .card{
+//     top:-11px
+// }
+// }
+// }
+// @media screen and (max-width: 768px){
+//     &__logo li a :last-child:span{
+//         display: none;
+//     }
+//     &__search{
+//         width: 100%;}
+// }
