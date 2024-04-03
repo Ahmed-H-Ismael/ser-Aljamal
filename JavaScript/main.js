@@ -24,7 +24,7 @@ overLay.addEventListener("click",function(){
 hairMenue.addEventListener("mouseover",function(){
 category.classList.add("active")
 })
-hairMenue.addEventListener("click",function(){
+.arrow-right.addEventListener("click",function(){
     category.classList.add("active")  
 })
 category.addEventListener("mouseleave",function(){
