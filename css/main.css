@@ -418,10 +418,10 @@ main {
     text-transform: uppercase;
     color: var(--bold-gray-color);
     transition: all .2s; }
-    .header__item a .arrow-right {
-      display: none; }
     .header__item a:hover {
       color: var(--main-color); }
+  .header__item.hair .arrow-right {
+    display: none; }
   @media screen and (max-width: 991px) {
     .header__sidebar {
       display: block; }
@@ -450,14 +450,20 @@ main {
       transform: translateX(0); }
     .header__navbar {
       display: block; }
-    .header__item a {
-      margin-bottom: 1rem;
-      display: block;
+    .header__item {
       border-bottom: 1px solid gray;
+      margin-bottom: 1rem;
       padding-bottom: 1rem; }
-      .header__item a .arrow-right {
+    .header__item a {
+      display: block; }
+    .header__item.hair {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .header__item.hair .arrow-right {
         display: block;
-        float: right; } }
+        float: right;
+        cursor: pointer; } }
 
 .header__category {
   position: absolute;
@@ -469,7 +475,10 @@ main {
   margin: 10px auto 0;
   padding: 10px;
   box-shadow: 1px 7px 22px -8px rgba(77, 76, 76, 0.8);
+  transform: scale(0);
   transition: all .2s; }
+  .header__category .back {
+    display: none; }
   .header__category-head a {
     font-size: 21px;
     color: black;
@@ -483,9 +492,8 @@ main {
     .header__category-item a:hover {
       color: var(--main-color); }
 
-@media (hover: none) {
-  .header__category.active {
-    transform: scale(1); } }
+.header__category.active {
+  transform: scale(1); }
 
 @media screen and (max-width: 991px) {
   .header__category {
@@ -495,7 +503,16 @@ main {
     left: 100%;
     opacity: 0;
     transform: scale(1);
+    height: 100%;
     overflow: scroll; }
+    .header__category .back {
+      display: block;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid gray;
+      margin-bottom: 1rem;
+      cursor: pointer; }
+      .header__category .back .fa-chevron-left {
+        padding-right: 1rem; }
   .header__category.active {
     left: 0;
     opacity: 1; } }

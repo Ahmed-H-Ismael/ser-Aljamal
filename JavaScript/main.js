@@ -2,8 +2,10 @@
 const sidebar = document.querySelector(".header__sidebar");
 const navBar = document.querySelector(".header__ul");
 const overLay = document.querySelector(".overlay")
-const close = document.querySelector(".close")
-const hairMenue = document.querySelector(".hair")
+const close = document.querySelector(".close");
+const back = document.querySelector(".back")
+const arrowRight = document.querySelector(".arrow-right")
+const hairHover = document.querySelector(".hair-hover")
 const category = document.querySelector(".header__category")
 // sidebar function
 sidebar.addEventListener("click",function(){
@@ -21,14 +23,27 @@ overLay.addEventListener("click",function(){
     this.classList.remove("active");
     document.querySelector("body").style.overflowY = 'visible';
 })
-hairMenue.addEventListener("mouseover",function(){
-category.classList.add("active")
-})
-.arrow-right.addEventListener("click",function(){
-    category.classList.add("active")  
+
+hairHover.addEventListener("mouseover",function(){
+    category.classList.add("active")
 })
 category.addEventListener("mouseleave",function(){
     this.classList.remove("active")
+})
+arrowRight.addEventListener("click",function(){
+    category.classList.add("active")
+})
+
+back.addEventListener("click",function(){
+    category.classList.remove("active")  
+})
+
+
+
+
+
+back.addEventListener("click",function(){
+    category.classList.remove("active")
 })
 // new products function
 const productsarrivals = document.querySelector(".arrivals");
