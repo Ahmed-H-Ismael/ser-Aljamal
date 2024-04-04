@@ -64,6 +64,11 @@ backBtn.addEventListener("click",function(){
     document.querySelector("body").style.overflowY = 'visible';
     overLay.classList.remove("active")
 })
+overLay.addEventListener("click",function(){
+    shoppingEle.classList.remove("active")
+    document.querySelector("body").style.overflowY = 'visible';
+    overLay.classList.remove("active")
+})
 let myPrice = 0
 
 plusBtn.addEventListener("click",function(){

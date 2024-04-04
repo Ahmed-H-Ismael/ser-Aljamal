@@ -1,0 +1,15 @@
+.login{
+    background-color: var(--main-bg-color);
+    padding: 6rem 2rem;
+    .form-check-input:checked {
+        background-color: var(--main-color);
+        border-color: var(--main-color);
+    }
+    .btn-web{
+        background-color: var(--main-color);
+        color: white;
+    }
+    .btn-web:hover{
+        background-color: rgba(237, 19, 148,.9);; 
+    }
+}

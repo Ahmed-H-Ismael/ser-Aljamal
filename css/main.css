@@ -1,5 +1,5 @@
 :root {
-  --main-color:#ED1394;
+  --main-color:rgb(237, 19, 148);
   --mainBG-color:rgba(237, 19, 148, 0.1);
   --white-color:#ffff;
   --light-gray-color:#CFCFCF;
@@ -157,7 +157,7 @@ main {
     flex: 0 0 25% !important; }
   @media screen and (max-width: 768px) {
     .cards .col-width {
-      flex: 0 0 50% !important; } }
+      flex: 0 0 100% !important; } }
 
 @media screen and (max-width: 576px) {
   .cards {
@@ -385,7 +385,7 @@ main {
   .sponsers .arrows .arrow {
     position: absolute;
     content: "";
-    top: 37%; }
+    top: 38%; }
     .sponsers .arrows .arrow_left {
       left: -2%; }
     .sponsers .arrows .arrow_right {
@@ -643,6 +643,12 @@ main {
       border-bottom: 2px solid var(--white-color); }
   .footer__social-media li {
     margin-bottom: 8px; }
+    .footer__social-media li .fa-brands {
+      background-color: white;
+      color: var(--footer-bg-color);
+      font-size: 15px;
+      border-radius: 50%;
+      padding: 3px; }
   @media screen and (max-width: 576px) {
     .footer__social-media {
       display: flex;
@@ -660,8 +666,9 @@ main {
     margin-bottom: .3rem; }
   .footer__app span {
     color: rgba(255, 255, 255, 0.6); }
-  .footer__app svg {
-    margin: 0 5px; }
+  .footer__app a img {
+    margin-left: 5px;
+    width: 10%; }
   @media screen and (max-width: 576px) {
     .footer__contact {
       display: flex;
@@ -880,6 +887,9 @@ main {
     .header__logo .navbar-search.active {
       opacity: 1;
       transform: translateY(0); } }
+  @media screen and (max-width: 576px) {
+    .header__logo .navbar img {
+      margin-top: -16px; } }
 
 .header__search {
   position: relative; }
@@ -949,6 +959,18 @@ main {
   .header__log li.search {
     display: block; } }
 
+.faq {
+  margin-top: 1rem; }
+  .faq__content {
+    margin-bottom: 2rem; }
+    .faq__content h3 {
+      font-size: 1.5rem; }
+    .faq__content ul {
+      list-style: disc; }
+      .faq__content ul li {
+        margin-left: 1rem;
+        font-family: ui-sans-serif; }
+
 .left__side {
   padding: 0px 25px 0x 0; }
   .left__side-header {
@@ -1007,3 +1029,15 @@ main {
 @media screen and (max-width: 992px) {
   .right__side {
     border-left: none; } }
+
+.login {
+  background-color: var(--main-bg-color);
+  padding: 6rem 2rem; }
+  .login .form-check-input:checked {
+    background-color: var(--main-color);
+    border-color: var(--main-color); }
+  .login .btn-web {
+    background-color: var(--main-color);
+    color: white; }
+  .login .btn-web:hover {
+    background-color: rgba(237, 19, 148, 0.9); }

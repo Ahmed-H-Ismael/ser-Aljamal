@@ -26,6 +26,13 @@
     }
     &__social-media li{
         margin-bottom: 8px;
+        & .fa-brands{
+            background-color: white;
+            color: var(--footer-bg-color);
+            font-size: 15px;
+            border-radius: 50%;
+            padding: 3px;
+        }
     }
     @media screen and (max-width: 576px){
         &__social-media {
@@ -52,8 +59,11 @@
         span{
             color:rgba(255, 255, 255, 0.6);
         }
-        svg{
-            margin: 0 5px;
+        a{
+            img{
+                margin-left: 5px;
+                width: 10%;
+            }
         }
     }
     @media screen and (max-width: 576px){
