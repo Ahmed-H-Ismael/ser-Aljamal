@@ -253,6 +253,10 @@
     }
 }
 .sponsers{
+    background-color: white;
+    .slick-prev,.slick-next {
+        z-index: 111111;
+    }
     @media screen and (max-width: 992px){  
         & .row img{
              width: 80%;
@@ -265,9 +269,9 @@
         .arrow{
             position: absolute;
             content: "";
-            top: 36%;
+            top: 37%;
             &_left{
-                left: 0;
+                left: -2%;
             }
             &_right{
                 right: -3%;
@@ -275,7 +279,7 @@
             }
             @media screen and (max-width: 992px){  
                 &_right{
-                    right: 0%;
+                    right: -5%;
                 }
             }
         }

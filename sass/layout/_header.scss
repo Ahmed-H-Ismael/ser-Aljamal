@@ -60,6 +60,7 @@
         img{
             width: 70%;
             height: 70%;
+            margin-top: -13px;
            }
        } 
        @media screen and (max-width: 991px){
@@ -68,10 +69,21 @@
             img{
                 width: 90%;
                 height: 90%;
+                margin-top: 0;
                }
            } 
         .text-card{
             display: none;
+        }
+        .navbar-search{
+            opacity: 0;
+            transform: translateY(-100%);
+            transition: all .2s;
+            
+        }
+        .navbar-search.active{
+            opacity: 1;
+            transform: translateY(0) 
         }
 }
     }
@@ -93,6 +105,15 @@
             top: 0px;
             left: 0;
             color: gray;
+        }
+        @media screen and (max-width: 991px){
+            &-input{
+                padding: 10px;
+                border: 2px solid var(--main-color);
+            }
+            &-btn{
+                display: none;
+            } 
         }
     }
     &__log{
@@ -136,32 +157,22 @@
             &:hover .fa-solid,&:hover .fa-regular{
                 color: var(--main-color);
             }
+            &.search{
+                display: none;
+            }
         }
+        @media screen and (max-width: 991px){
+           li{
+            &:not(:last-child){
+                border-right:none
+            }
+            &.user{
+                display: none;
+            }
+            &.search{
+                display: block;
+            }
+           } 
+        }
+    }
 }
-}
-
-// @media screen and (max-width: 576px){
-//     & li:not(:last-child){
-//         margin-right: 2px;
-//         padding-right: 5px;
-//         border-right: 0px;
-//     }
-//     & li a{
-//         font-size: 12px; 
-//     }
-// }
-// }
-// @media screen and (max-width: 576px){
-// li{
-// .card{
-//     top:-11px
-// }
-// }
-// }
-// @media screen and (max-width: 768px){
-//     &__logo li a :last-child:span{
-//         display: none;
-//     }
-//     &__search{
-//         width: 100%;}
-// }

@@ -70,17 +70,17 @@
         </div>
         <div class="header__logo">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-4 col-lg-3">
+                <div class="row justify-content-end align-items-center">
+                    <div class="col-4 justify-content-between col-lg-3 order-1 order-lg-1">
                         <nav class="navbar p-0">
                             <a class="navbar-brand p-0" href="index.html">
-                                <img src="./Img/WhatsApp.png">
+                                <img src="./Img/logo2.png">
                             </a>
                         </nav>
                     </div>
-                    <div class="col-4 d-flex  order-md-0 col-lg-6 justify-content-center">
-                        <nav class="navbar w-100">
-                              <form class="d-flex header__search w-75" role="search">
+                    <div class="col-12 d-flex order-3 order-lg-2  col-lg-5 justify-content-center">
+                        <nav class="navbar navbar-search w-100">
+                              <form class="d-flex header__search w-100" role="search">
                                 <input class="form-control me-2 header__search-input" type="search" placeholder="Search" aria-label="Search">
                                 <button class="btn header__search-btn" type="submit">
                                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -88,16 +88,21 @@
                               </form>
                           </nav>
                     </div>
-                    <div class="col-4 col-lg-3 d-flex align-items-center justify-content-center">
+                    <div class="col-4 col-lg-4 order-2 order-lg-3 d-flex justify-content-end align-items-center justify-content-lg-center">
                         <ul class="header__log d-flex">
+                            <li class="search">
+                                <a href="#" class="navsearch"> 
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </li>
                             <li>
-                                <a href="#">
+                                <a href="#" class="cart-shopping-link">
                                     <span class="card">2</span> 
                                     <i class="fa-solid fa-cart-shopping fa-xl"></i>
                                     <span class="text-card">Cart</span> 
                                 </a>
                             </li>
-                            <li>
+                            <li class="user">
                                 <a href="#"><i class="fa-regular fa-user"></i>
                                     <span class="text-card">Login</span>
                                 </a>
@@ -110,6 +115,74 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="header__card-shopping">
+            <div class="header__card-shopping-back back-cart">
+                <i class="fa-solid fa-chevron-left"></i> Continue Shopping
+            </div>
+            <div class="header__card-shopping-content">
+                <div class="header__card-shopping-head">
+                    <h4>YOUR ORDER</h4>
+                    <a href="#">view card</a>
+                </div>
+                <div class="header__card-shopping-accordion">
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                PRODUCTS ( <span class="count"></span> )
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="row align-items-center">
+                                    <div class="col-4">
+                                        <div class="card__product mt-2">
+                                            <img src="./Img/p1.png" alt="productCard">
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div  class="cards__details">
+                                            <p class="cards__details-name mb-0">SIROC 4500 Hair Dryer - Ceriotti</p>
+                                            <p class="cards__price-price mb-0" >$29999 <del>$31999</del></p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      
+                    </div>
+                </div>
+                <div class="header__card-shopping-add-remove">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <div class="input-group">
+                                <button class="btn btn-outline-secondary minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                                <input type="number" class="form-control price-value" placeholder="" aria-label="Example text with two button addons">
+                                <button class="btn btn-outline-secondary plus" type="button"><i class="fa-solid fa-plus"></i></button>
+                              </div>
+                              
+                        </div>
+                        <div class="col">
+                            <button class="remove-p">remove</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="total__price">
+                    <div class="row">
+                        <div class="col">
+                            <p class="mb-0">Subtotal:</p>
+                        </div>
+                        <div class="col">
+                            <p class="mb-0 text-end">98.00 د.إ AED</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="CheckOut">CheckOut</a>
             </div>
         </div>
         <div class="header__nav">
@@ -149,7 +222,7 @@
             <div class="container">
                 <div class="row">
                     <div class="back"><i class="fa-solid fa-chevron-left"></i>Back</div>
-                    <div class="col-12 col-md-2">
+                    <div class="col-12 col-lg-2">
                         <div class="header__content">
                             <h2 class="header__category-head"><a href="#">Shampoo</a> </h2>
                             <ul class="header__category-dropmenue">
@@ -160,7 +233,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-md-2">
+                    <div class="col-12 col-lg-2">
                         <div class="header__content">
                             <h2 class="header__category-head"><a href="#">Conditioner</a> </h2>
                             <ul class="header__category-dropmenue">
@@ -169,7 +242,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-md-1">
+                    <div class="col-12 col-lg-1">
                         <div class="header__content">
                             <h2 class="header__category-head"><a href="#">Mask</a> </h2>
                             <ul class="header__category-dropmenue">
@@ -178,7 +251,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-md-1">
+                    <div class="col-12 col-lg-1">
                         <div class="header__content">
                             <h2 class="header__category-head"><a href="#">oil</a> </h2>
                             <ul class="header__category-dropmenue">
@@ -187,7 +260,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-md-2">
+                    <div class="col-12 col-lg-2">
                         <div class="header__content">
                             <h2 class="header__category-head"><a href="#">Hair Styling </a> </h2>
                             <ul class="header__category-dropmenue">
@@ -202,7 +275,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-lg-4">
                         <div class="header__content">
                             <h2 class="header__category-head"><a href="#">Treatment </a> </h2>
                             <ul class="header__category-dropmenue">

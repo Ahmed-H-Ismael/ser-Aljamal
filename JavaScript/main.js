@@ -7,6 +7,15 @@ const back = document.querySelector(".back")
 const arrowRight = document.querySelector(".arrow-right")
 const hairHover = document.querySelector(".hair-hover")
 const category = document.querySelector(".header__category")
+const navBtn= document.querySelector(".navsearch")
+const navbarSearch= document.querySelector(".navbar-search")
+const priceLabel = document.querySelector(".price-value")
+const plusBtn = document.querySelector(".plus")
+const minusBtn = document.querySelector(".minus");
+const countProducts = document.querySelector(".count");
+const cardBtn = document.querySelector(".cart-shopping-link")
+const shoppingEle = document.querySelector(".header__card-shopping");
+const backBtn = document.querySelector(".back-cart")
 // sidebar function
 sidebar.addEventListener("click",function(){
     navBar.classList.add("active")
@@ -38,13 +47,38 @@ back.addEventListener("click",function(){
     category.classList.remove("active")  
 })
 
-
-
-
-
 back.addEventListener("click",function(){
     category.classList.remove("active")
 })
+navBtn.addEventListener("click",function(){
+navbarSearch.classList.toggle("active")
+})
+// card function
+cardBtn.addEventListener('click',function(){
+    shoppingEle.classList.add("active")
+    document.querySelector("body").style.overflowY = 'hidden';
+    overLay.classList.add("active")
+})
+backBtn.addEventListener("click",function(){
+    shoppingEle.classList.remove("active")
+    document.querySelector("body").style.overflowY = 'visible';
+    overLay.classList.remove("active")
+})
+let myPrice = 0
+
+plusBtn.addEventListener("click",function(){
+    myPrice = myPrice + 1
+    priceLabel.value = myPrice
+    countProducts.textContent = myPrice
+})
+minusBtn.addEventListener("click",function(){
+    if(myPrice > 0){
+        myPrice = myPrice - 1
+        priceLabel.value = myPrice;
+        countProducts.textContent = myPrice
+    }
+})
+
 // new products function
 const productsarrivals = document.querySelector(".arrivals");
 const productssales = document.querySelector(".sales");
@@ -297,14 +331,14 @@ function removeClass(x){
         pro.classList.remove("active")
     })
 }
-// function removeActive(){
-//     listarr.forEach(function(active){
-//         active.classList.remove("active")
-//     })
-//     listsales.forEach(function(active){
-//         active.classList.remove("active")
-//     })
-//     listTreanding.forEach(function(active){
-//         active.classList.remove("active")
-//     })
-// }
+function removeActive(){
+    listarr.forEach(function(active){
+        active.classList.remove("active")
+    })
+    listsales.forEach(function(active){
+        active.classList.remove("active")
+    })
+    listTreanding.forEach(function(active){
+        active.classList.remove("active")
+    })
+}
