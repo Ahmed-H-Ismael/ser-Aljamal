@@ -171,7 +171,7 @@
     margin: 0;
     top:0;
     right:-100%;
-    width: 40%;
+    width: 30%;
     height: 100%;
     z-index: 2222;
     transition: all .2s;
@@ -275,7 +275,7 @@
     .total__price{
         margin-top: 3rem;
     }
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 991px){
         width: 60%;
     }
     @media screen and (max-width: 576px){

@@ -31,10 +31,6 @@ body {
     box-sizing: border-box;
     font-family: 'Acme', sans-serif;
 }
-main{
-    padding: 2rem 0;
-    background-color: var(--main-bg-color);
-}
 .overlay{
     opacity: 0;
     position: absolute;
@@ -52,4 +48,13 @@ main{
     opacity: 1;
     pointer-events: auto;
     z-index: 1;
+}
+main{
+    padding: 2rem 0;
+    background-color: var(--main-bg-color);
+}
+.section__container{
+    background-color: var(--white-color);
+    border-radius: 60px;
+    padding: 3rem 2rem;
 }

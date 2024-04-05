@@ -173,7 +173,7 @@
     margin: 1rem 0;
     padding: 4rem 2rem;
     background-color: var(--white-color);
-    border-radius: $border-radious-20;
+    border-radius: $border-radious-60;
     & h2{
         font-size: 2.5rem;
         color: var(--bold-gray-color);
@@ -254,6 +254,7 @@
 }
 .sponsers{
     background-color: white;
+    border-radius: $border-radious-60;
     .slick-prev,.slick-next {
         z-index: 111111;
     }
@@ -269,18 +270,19 @@
         .arrow{
             position: absolute;
             content: "";
-            top: 38%;
+            top: 34%;
             &_left{
-                left: -2%;
+                left: 0
             }
             &_right{
-                right: -3%;
+                right: 0;
         
             }
+
+            }
             @media screen and (max-width: 992px){  
-                &_right{
-                    right: -5%;
-                }
+            .arrow{
+                top: 37%;
             }
         }
         @media screen and (max-width: 992px){  

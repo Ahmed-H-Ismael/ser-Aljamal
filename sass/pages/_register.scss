@@ -1,6 +1,54 @@
+.log{
+    .items__heading-main::after {
+        right: -15%;
+    }
+}
 .login{
-    background-color: var(--main-bg-color);
-    padding: 6rem 2rem;
+    &__social{
+        width: 250px;
+        border: 1px solid black;
+        display: block;
+        padding: 7px;
+        margin-bottom: 5px;
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            color: black;
+        }
+        img{
+            width: 10%;
+            margin-right: 10px;
+        }
+    }
+    &__line{
+        position: relative;
+        text-align: center;
+        margin-top: 2rem
+    }
+    &__line::before{
+        position: absolute;
+        content: "";
+        width: 32%;
+        height: 1px;
+        background-color: black;
+        left: 0;
+        top: 50%;
+    }
+    &__line::after{
+        position: absolute;
+        content: "";
+        width: 32%;
+        height: 1px;
+        background-color: black;
+        right: 0;
+        top: 50%;
+    }
+    .form-control:focus {
+        background-color: transparent;
+        border-color: var(--main-color);
+         box-shadow: 0 0 0 0.06rem var(--main-color);;
+    }
     .form-check-input:checked {
         background-color: var(--main-color);
         border-color: var(--main-color);
@@ -10,6 +58,6 @@
         color: white;
     }
     .btn-web:hover{
-        background-color: rgba(237, 19, 148,.9);; 
+        background-color: rgba(237, 19, 148,.7);; 
     }
 }

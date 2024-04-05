@@ -1,16 +1,24 @@
 .faq{
-    margin-top: 1rem;
-    &__content{
-        margin-bottom: 2rem;
-        h3{
-            font-size: 1.5rem;
-        }
-        ul{
-            list-style: disc;
-            li{
-                margin-left: 1rem;
-                font-family: ui-sans-serif;
-            }
-        }
-        }
+.items__heading-main::after {
+    right: -15%;
+}
+}
+.accordion-button,.accordion-button:not(.collapsed){
+    font-size: 1.5rem;
+    box-shadow: none;
+    border:none;
+    background-color: transparent;
+}
+.accordion-button:focus{
+    border-color: none;
+    box-shadow: none;
+}
+.accordion-body{
+ul{
+    list-style: disc;
+    li{
+        margin-left: 1rem;
+        font-family: ui-sans-serif;
     }
+}
+}

@@ -56,6 +56,9 @@
        border-bottom: 1px solid #e5e1e1; 
        height: 70px;
        line-height: 3;
+       & .container.white{
+        background-color: white;
+       }
        .navbar{
         img{
             width: 70%;

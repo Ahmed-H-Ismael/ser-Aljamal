@@ -8,6 +8,7 @@ const arrowRight = document.querySelector(".arrow-right")
 const hairHover = document.querySelector(".hair-hover")
 const category = document.querySelector(".header__category")
 const navBtn= document.querySelector(".navsearch")
+const headerLogo= document.querySelector(".header__logo .container")
 const navbarSearch= document.querySelector(".navbar-search")
 const priceLabel = document.querySelector(".price-value")
 const plusBtn = document.querySelector(".plus")
@@ -51,7 +52,8 @@ back.addEventListener("click",function(){
     category.classList.remove("active")
 })
 navBtn.addEventListener("click",function(){
-navbarSearch.classList.toggle("active")
+navbarSearch.classList.toggle("active");
+headerLogo.classList.toggle("white")
 })
 // card function
 cardBtn.addEventListener('click',function(){
