@@ -107,9 +107,9 @@ main {
   margin: 3rem auto;
   border-radius: 60px; }
   .cards__content {
-    background-color: #cfcfcf2e;
+    background-color: #cfcfcf45;
     padding: 10px;
-    border-radius: 10px; }
+    border-radius: 20px; }
   .cards__content-width {
     width: 25%; }
   .cards__para {
@@ -124,12 +124,13 @@ main {
     padding: 8px;
     line-height: 1;
     cursor: pointer; }
-    .cards__icon svg {
-      fill: var(--main-color); }
+    .cards__icon .fa-solid, .cards__icon .fa-regular {
+      color: var(--main-color); }
     .cards__icon:hover {
       background-color: var(--main-color); }
-    .cards__icon:hover svg {
-      fill: var(--white-color); }
+    .cards__icon:hover .fa-solid,
+    .cards__icon:hover .fa-regular {
+      color: var(--white-color); }
   .cards__price {
     font-size: 15px; }
     .cards__price-name {
@@ -655,6 +656,16 @@ main {
       font-size: 15px;
       border-radius: 50%;
       padding: 3px; }
+    .footer__social-media li .fa-facebook-f {
+      padding: 3px 5px; }
+    .footer__social-media li .fa-instagram {
+      padding: 3px 4px; }
+    .footer__social-media li .fa-youtube {
+      padding: 3px 2px; }
+    .footer__social-media li .fa-google-plus-g {
+      padding: 4px 2px; }
+    .footer__social-media li .fa-square-pinterest {
+      padding: 5px; }
   @media screen and (max-width: 576px) {
     .footer__social-media {
       display: flex;
@@ -967,6 +978,70 @@ main {
   .header__log li.search {
     display: block; } }
 
+.compare__product .cards__para {
+  font-size: 18px; }
+
+.compare__product .cards__icon .fa-heart {
+  font-size: 22px; }
+
+.compare__product .cards__star {
+  margin-top: 20px;
+  color: #909090; }
+  .compare__product .cards__star span {
+    margin-right: 5px;
+    color: var(--light-black-color); }
+  .compare__product .cards__star .fa-star {
+    color: #ffc107;
+    margin-right: 5px; }
+
+.compare__product .colors__span {
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 15px;
+  margin-top: 15px;
+  cursor: pointer; }
+
+.compare__product .colors__sky {
+  background-color: #09D3D3; }
+
+.compare__product .colors__purple {
+  background-color: #FA00FF; }
+
+.compare__product .colors__yellow {
+  background-color: #FFE500; }
+
+.compare__product .colors__blue {
+  background-color: #4A41CC; }
+
+.compare__product .content {
+  color: #909090; }
+
+.compare__product .brand img {
+  width: 35%;
+  border: 1px solid black;
+  margin-right: 25px; }
+
+.compare__product .brand span {
+  color: #009031;
+  font-size: 20px; }
+
+.compare__product .btns .btn-secondary {
+  background-color: #908e8e1c;
+  color: #909090;
+  border: none; }
+
+.compare__product .add__product {
+  display: block;
+  text-decoration: underline;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--bold-gray-color);
+  font-size: 22px; }
+
 .faq .items__heading-main::after {
   right: -15%; }
 
@@ -1044,6 +1119,50 @@ main {
 @media screen and (max-width: 992px) {
   .right__side {
     border-left: none; } }
+
+.myaccount .items__heading-main::after {
+  right: -15%; }
+
+.myaccount__details-header {
+  padding: 0rem 1rem; }
+  .myaccount__details-header ul li {
+    cursor: pointer;
+    padding: 1rem;
+    background-color: #cfcfcf59;
+    color: var(--normal-gray-color);
+    margin-bottom: 1rem;
+    border-radius: 60px;
+    text-align: left;
+    position: relative; }
+    .myaccount__details-header ul li .fa-solid, .myaccount__details-header ul li .fa-regular {
+      margin: 0 1rem; }
+    .myaccount__details-header ul li .fa-arrow-right {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%); }
+
+.myaccount__details-content > div {
+  display: none; }
+
+.myaccount__details-content .form-control:focus {
+  background-color: transparent;
+  border-color: var(--main-color);
+  box-shadow: 0 0 0 0.06rem var(--main-color); }
+
+.myaccount__details-content .form-check-input:checked {
+  background-color: var(--main-color);
+  border-color: var(--main-color); }
+
+.myaccount__details-content .btn-web {
+  background-color: var(--main-color);
+  color: white; }
+
+.myaccount__details-content .btn-web:hover {
+  background-color: rgba(237, 19, 148, 0.7); }
+
+.myaccount__details-content > div.active {
+  display: block; }
 
 .log .items__heading-main::after {
   right: -15%; }

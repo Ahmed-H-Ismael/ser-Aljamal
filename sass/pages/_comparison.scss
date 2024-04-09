@@ -1,0 +1,78 @@
+.compare{
+    &__product{
+        .cards__para{
+            font-size: 18px;
+        }
+        .cards__icon{
+            .fa-heart{
+                font-size: 22px;
+            }
+        }
+        .cards__star{
+            margin-top: 20px;
+            color: #909090;
+        & span{
+            margin-right: 5px;
+            color: var( --light-black-color);
+        }
+        & .fa-star{
+            color: #ffc107;
+            margin-right: 5px;
+        }
+        }
+        .colors{
+            &__span{
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+                border-radius: 50%;
+                margin-right: 15px;
+                margin-top: 15px;
+                cursor: pointer;
+            }
+            &__sky{
+                background-color:#09D3D3;
+            }
+            &__purple{
+                background-color:#FA00FF;
+            }
+            &__yellow{
+                background-color: #FFE500;
+            }
+            &__blue{
+                background-color: #4A41CC;
+            }
+        }
+        .content{
+            color: #909090;
+        }
+        .brand{
+            img{
+                width: 35%;
+                border: 1px solid black;
+                margin-right: 25px;
+            }
+            span{
+                color: #009031;
+                font-size: 20px;
+            }
+        }
+        .btns{
+            .btn-secondary{
+                background-color:  #908e8e1c;;
+                color:#909090;
+                border:none;
+            }
+        }
+        .add__product{
+            display: block;
+            text-decoration: underline;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            color: var(--bold-gray-color);
+            font-size: 22px;
+        }
+    }
+}

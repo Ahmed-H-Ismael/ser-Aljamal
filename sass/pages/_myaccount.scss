@@ -1,0 +1,52 @@
+.myaccount{
+    .items__heading-main::after {
+        right: -15%;
+    }
+    &__details-header{
+        padding: 0rem 1rem;
+    ul li{
+        cursor: pointer;
+        padding: 1rem;
+        background-color: #cfcfcf59;
+        color: var(--normal-gray-color);
+        margin-bottom: 1rem;
+        border-radius: $border-radious-60;
+        text-align: left;
+        position: relative;
+        .fa-solid,.fa-regular{
+            margin: 0 1rem;
+        }
+        .fa-arrow-right{
+            position: absolute;
+            right:10px;
+            top:50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+}
+.myaccount__details-content{
+   > div {
+        display: none;
+    }
+    .form-control:focus {
+        background-color: transparent;
+        border-color: var(--main-color);
+         box-shadow: 0 0 0 0.06rem var(--main-color);;
+    }
+    .form-check-input:checked {
+        background-color: var(--main-color);
+        border-color: var(--main-color);
+    }
+    .btn-web{
+        background-color: var(--main-color);
+        color: white;
+    }
+    .btn-web:hover{
+        background-color: rgba(237, 19, 148,.7);; 
+    }
+
+}
+.myaccount__details-content > div.active{
+    display: block;
+}

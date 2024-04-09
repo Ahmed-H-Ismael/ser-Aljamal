@@ -8,9 +8,9 @@
     margin: 3rem auto;
     border-radius: 60px;
     &__content{
-        background-color: #cfcfcf2e;
+        background-color: #cfcfcf45;
         padding: 10px;
-        border-radius: $border-radious-10;
+        border-radius: $border-radious-20;
     }
     &__content-width{
         width: 25%;
@@ -28,14 +28,16 @@
         padding: 8px;
         line-height: 1;
         cursor: pointer;
-        & svg{
-            fill:var(--main-color)
+        .fa-solid,.fa-regular{
+            color: var(--main-color);
         }
         &:hover{
             background-color:var(--main-color)
         }
-        &:hover svg{
-            fill: var(--white-color);
+        &:hover .fa-solid,
+        &:hover .fa-regular
+        {
+            color: var(--white-color);
         }
     }
     &__price{

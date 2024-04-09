@@ -33,6 +33,21 @@
             border-radius: 50%;
             padding: 3px;
         }
+        & .fa-facebook-f{
+            padding: 3px 5px;
+        }
+        & .fa-instagram{
+            padding: 3px 4px;
+        }
+        &  .fa-youtube{
+            padding: 3px 2px;
+        }
+        & .fa-google-plus-g{
+            padding: 4px 2px;
+        }
+        & .fa-square-pinterest{
+            padding: 5px;
+        }
     }
     @media screen and (max-width: 576px){
         &__social-media {
