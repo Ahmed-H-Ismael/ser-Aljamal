@@ -1,9 +1,12 @@
 .myaccount{
+    background-color: var(--main-bg-color);
     .items__heading-main::after {
         right: -15%;
     }
     &__details-header{
-        padding: 0rem 1rem;
+        padding: 1rem 2rem;
+        border-radius: 60px;
+        background-color: var(--white-color);
     ul li{
         cursor: pointer;
         padding: 1rem;
@@ -26,13 +29,19 @@
 }
 }
 .myaccount__details-content{
+    padding: 1rem 2rem;
+    background-color: var(--white-color);
+    border-radius: 60px;
    > div {
         display: none;
+    }
+    input{
+        background-color: var(--main-bg-color);
     }
     .form-control:focus {
         background-color: transparent;
         border-color: var(--main-color);
-         box-shadow: 0 0 0 0.06rem var(--main-color);;
+        box-shadow: 0 0 0 0.06rem var(--main-color);;
     }
     .form-check-input:checked {
         background-color: var(--main-color);

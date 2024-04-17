@@ -9,7 +9,6 @@
         align-items: center;
     }
     &__sidebar{
-        text-decoration: none;
         font-size: 18px;
         color: var(--bold-gray-color);
         display: none;
@@ -29,7 +28,6 @@
         gap: 3rem;
     }
     &__item a{
-        text-decoration: none;
         font-size: 18px;
         text-transform: uppercase;
         color: var(--bold-gray-color);

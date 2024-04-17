@@ -253,7 +253,7 @@ const allProducthtml = function(myproduct){
                             <i class="fa-regular fa-heart"></i>
                         </div>
                         </div>
-                        <img src="${prod.img}" class="card-img-top" alt="makeup">
+                        <a href="products.html"><img src="${prod.img}" class="card-img-top" alt="makeup"></a>
                         <div class="d-flex justify-content-between align-items-center">
                         <div class="cards__price mt-2">
                         <p class="cards__price-name mb-0">${prod.nameItem}</p>

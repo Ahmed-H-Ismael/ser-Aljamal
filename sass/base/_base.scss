@@ -10,6 +10,9 @@
     --footer-bg-color:#545454;
     --black-color:#000;
     --light-black-color:#343A40;
+    --green-color :#009031;
+    --cart-color:#909090;
+    --cart-bg-color:#908e8e1c;
 
 }
 *,
@@ -57,4 +60,17 @@ main{
     background-color: var(--white-color);
     border-radius: 60px;
     padding: 3rem 2rem;
+}
+.instock{
+    color: var(--green-color);
+    font-size: 20px;
+}
+.brandImg{
+    @include brandImg
+}
+.btn-card{
+    @include btn-card
+}
+.btn-danger{
+    padding: $padding-cart;
 }

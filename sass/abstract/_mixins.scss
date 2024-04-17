@@ -13,3 +13,15 @@
     font-size: 16px;
     margin-right: 5px;
 }
+@mixin brandImg{
+    width: 35%;
+    border: 1px solid black;
+    margin-right: 25px;
+    border-radius: 15px;
+}
+@mixin btn-card{
+    background-color: var(--cart-bg-color);
+    color: var(--cart-color);
+    border: none;
+    padding: $padding-cart;
+}
